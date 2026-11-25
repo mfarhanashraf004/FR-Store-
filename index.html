@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="FR Store — thoughtfully selected everyday essentials, delivered across Pakistan.">
+<title>FR Store | Curated Finds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topline">COMPLIMENTARY DELIVERY ON SELECTED ORDERS · CASH ON DELIVERY AVAILABLE</div>
+<header class="header">
+  <a class="brand" href="#"><span class="brand-mark">FR</span><span>FR <b>STORE</b><small>CURATED EVERYDAY LUXURY</small></span></a>
+  <nav><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#about">Our Story</a></nav>
+  <div class="head-actions"><button class="icon-btn" id="searchToggle" aria-label="Search">⌕</button><button class="cart-btn" id="cartOpen">Bag <span id="cartCount">0</span></button><button class="admin-link" id="adminOpen">Admin</button></div>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy"><p class="eyebrow">THE FR STORE EDIT</p><h1>Everyday finds.<br><i>Elevated.</i></h1><p class="hero-sub">A considered collection of useful things, little luxuries and thoughtful essentials — chosen for your everyday.</p><a class="dark-button" href="#shop">Explore the collection <span>↗</span></a><div class="hero-note">NEW SEASON · 2026</div></div>
+  <div class="hero-art"><div class="sun"></div><div class="art-card art-one"><span>FR</span><small>THE DAILY EDIT</small></div><div class="art-card art-two"><span>LESS, BUT BETTER.</span></div><div class="art-caption">A LITTLE MORE BEAUTY IN THE EVERYDAY.</div></div>
+</section>
+<section class="trust-row"><div>✦ Thoughtfully selected</div><div>✦ Cash on delivery</div><div>✦ Customer-first support</div></section>
+<section class="section" id="categories"><div class="section-head"><div><p class="eyebrow">SHOP BY MOOD</p><h2>Find your <i>something.</i></h2></div><p class="muted">Explore the collection by category.</p></div><div class="category-grid" id="categoryGrid"></div></section>
+<section class="section shop-section" id="shop"><div class="section-head"><div><p class="eyebrow">THE COLLECTION</p><h2 id="productHeading">The <i>latest finds.</i></h2></div><div class="shop-tools"><input id="searchInput" placeholder="Search products…" aria-label="Search products"><select id="sortSelect"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div></div><div class="product-grid" id="productGrid"></div></section>
+<section class="quote-band" id="about"><p class="eyebrow">A NOTE FROM FR STORE</p><h2>Good things should feel<br><i>good to shop for.</i></h2><p>Simple browsing, clear prices and a smoother way to find everyday favourites.</p></section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-mark">FR</span><span>FR <b>STORE</b><small>CURATED EVERYDAY LUXURY</small></span></a><p>© 2026 FR Store. All rights reserved.</p><p>Customer care · Pakistan</p></footer>
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cartDrawer"><div class="drawer-head"><h3>Your bag</h3><button class="close" data-close>×</button></div><div id="cartItems"></div><div class="cart-bottom"><div class="total-line"><span>Subtotal</span><b id="cartTotal">Rs. 0</b></div><button class="dark-button full" id="checkoutBtn">Continue to checkout →</button></div></aside>
+<section class="modal" id="checkoutModal"><button class="close modal-close" data-close>×</button><p class="eyebrow">ALMOST YOURS</p><h2>Delivery <i>details.</i></h2><div id="checkoutSummary" class="checkout-summary"></div><form id="checkoutForm" class="form-grid"><label>Full name<input name="name" required placeholder="Your name"></label><label>Phone number<input name="phone" required type="tel" placeholder="03XXXXXXXXX"></label><label class="wide">Complete address<textarea name="address" required rows="3" placeholder="House, street, area, city"></textarea></label><label>City<input name="city" required placeholder="City"></label><label>Payment method<select name="payment"><option>Cash on Delivery</option><option>Bank Transfer (confirm manually)</option></select></label><button class="dark-button full wide" type="submit">Place order · <span id="checkoutAmount">Rs. 0</span></button></form><p class="fine-print">Your order request will be saved in this demo store. Payment and delivery are confirmed by the store owner.</p></section>
+<section class="modal admin-modal" id="adminModal"><button class="close modal-close" data-close>×</button><p class="eyebrow">STORE MANAGEMENT</p><h2>Admin <i>studio.</i></h2><div id="adminLogin"><p class="muted">Demo dashboard access. Change these demo credentials before any public launch.</p><label>Username<input id="adminUser" value="admin"></label><label>Password<input id="adminPass" type="password" value="FRstore2026"></label><button class="dark-button full" id="loginBtn">Open dashboard</button></div><div id="dashboard" hidden><div class="stats" id="stats"></div><div class="admin-tabs"><button class="active" data-tab="orders">Orders</button><button data-tab="products">Products</button></div><div id="adminContent"></div><button class="outline-button" id="logoutBtn">Log out</button></div></section>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body></html>
